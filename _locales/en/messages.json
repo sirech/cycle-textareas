@@ -1,0 +1,9 @@
+{
+    "extension_name" : {
+        "message" : "Cycle Through Textareas"
+    },
+
+    "extension_description" : {
+        "message" : "Cycle through all the text areas in a webpage by clicking a button"
+    }
+}

@@ -16,7 +16,7 @@
     },
 
     "content_scripts": [ {
-                             "js": [ "js/cycle.js" ],
+                             "js": [ "js/cycle.min.js" ],
                              "matches": [ "http://*/*", "https://*/*" ],
                              "all_frames": true
                          } ],

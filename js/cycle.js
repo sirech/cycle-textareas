@@ -7,6 +7,7 @@
          modKey : 'altKey'
      };
 
+     // Get the keycode for every letter
      var charKeyCodes = function() {
          var first, letters, codes, i;
 
@@ -19,6 +20,17 @@
          return codes;
      }();
 
+     /**
+      * Creates an iterator over the given tag, which cycles through
+      * all the elements in the given body changing the focus.
+      *
+      * @param {DOMElement} body the body where the tags are searched
+      * @param {String} tag the tag that identifies the elements for
+      * the iterator
+      * @return {Iterator} an iterator object with two methods, next
+      * and previous, that change the focus to the next/previous
+      * element of the given tag.
+      */
      function createIterator(body, tag) {
          var current, list;
 
@@ -42,11 +54,18 @@
          };
      }
 
+     /**
+      * Prevents an event from being propagated.
+      */
      function stopEvent(ev) {
          ev.preventDefault();
          ev.stopPropagation();
      }
 
+     /**
+      * Initializes the iterator and sets up a handler to recognize
+      * when a shortcut is pressed.
+      */
      function init(options) {
          var iterator;
          iterator = createIterator(document, 'textarea');
